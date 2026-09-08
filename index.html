@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Robot Control Center</title>
+  </head>
+  <body>
+    <!-- Judul Utama Halaman -->
+    <h1>Robot Control Center</h1>
+
+    <!-- Bagian 1: Wadah Status Robot -->
+    <div id="status-panel">
+      <h2>Status Robot</h2>
+      <p>Nama: <span>Robo-01</span></p>
+      <p>Baterai: <span id="battery-val">100</span>%</p>
+      <p>Arah Hadap: <span id="direction-val">NORTH</span></p>
+      <p>Posisi: <span id="position-val">(0, 0)</span></p>
+
+      <!-- Peringatan baterai rendah (nanti dimunculkan lewat JS) -->
+      <p id="warning-text"></p>
+    </div>
+
+    <!-- Bagian 2: Wadah Tombol Aksi -->
+    <div id="control-panel">
+      <h2>Panel Kontrol</h2>
+      <button id="btn-forward">Move Forward</button>
+      <button id="btn-left">Turn Left</button>
+      <button id="btn-right">Turn Right</button>
+      <button id="btn-charge">Recharge</button>
+      <button id="btn-check">Check Battery</button>
+      <button id="btn-reset">Reset</button>
+    </div>
+
+    <h2>Riwayat Aksi</h2>
+    <p id="log-text"></p>
+  </body>
+</html>
