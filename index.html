@@ -1,26 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Robot Control Center</title>
-  </head>
-  <body>
-    <!-- Judul Utama Halaman -->
-    <h1>Robot Control Center</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robot Control Center</title>
+</head>
+<body>
 
-    <!-- Bagian 1: Wadah Status Robot -->
+  <h1>Robot Control Center</h1>
+
+  <!-- Wadah Pembungkus Utama (Layout Dashboard) -->
+  <div id="dashboard-container">
+
+    <!-- Tambahan 1: Wadah Arena 5x5 -->
+    <div id="arena-panel">
+      <h2>Arena</h2>
+      <div id="grid-arena">
+        <!-- Kotak-kotak grid 0,0 sampai 4,4 akan kita render di sini -->
+      </div>
+    </div>
+
+    <!-- Panel Status -->
     <div id="status-panel">
       <h2>Status Robot</h2>
-      <p>Nama: <span>Robo-01</span></p>
-      <p>Baterai: <span id="battery-val">100</span>%</p>
-      <p>Arah Hadap: <span id="direction-val">NORTH</span></p>
+      <p>Nama: <span id="robot-name">Robo-Unit 01</span></p>
       <p>Posisi: <span id="position-val">(0, 0)</span></p>
-
-      <!-- Peringatan baterai rendah (nanti dimunculkan lewat JS) -->
+      <p>Arah Hadap: <span id="direction-val">NORTH</span></p>
+      
+      <!-- Tambahan 2: Wadah Visual Bar Baterai -->
+      <p>Baterai: <span id="battery-val">100</span>%</p>
+      <div id="battery-bar-container">
+        <div id="battery-bar-fill"></div>
+      </div>
+      
+      <!-- Indikator Peringatan Baterai Lemah -->
       <p id="warning-text"></p>
     </div>
 
-    <!-- Bagian 2: Wadah Tombol Aksi -->
+    <!-- Panel Kontrol Aksi -->
     <div id="control-panel">
       <h2>Panel Kontrol</h2>
       <button id="btn-forward">Move Forward</button>
@@ -28,10 +45,16 @@
       <button id="btn-right">Turn Right</button>
       <button id="btn-charge">Recharge</button>
       <button id="btn-check">Check Battery</button>
-      <button id="btn-reset">Reset</button>
+      <button id="btn-reset">Reset Position</button>
     </div>
 
-    <h2>Riwayat Aksi</h2>
-    <p id="log-text"></p>
-  </body>
+    <!-- Panel Riwayat Log -->
+    <div id="log-panel">
+      <h2>Riwayat Aksi</h2>
+      <p id="log-text">Sistem siap menerima perintah.</p>
+    </div>
+
+  </div>
+
+</body>
 </html>
